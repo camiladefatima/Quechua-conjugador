@@ -34,8 +34,8 @@ st.markdown("<h1 style='text-align: center;'>Conjugador de verbos en quechua</h1
 # <h1> es para el tamaño de la letra del título
 
 # Creamos una variable file_name para guardar la ruta de la base de datos de quechua
-file_name = "/Users/jamesmedinavanini/Downloads/Tarea 4/Copia de quechuaCA.xlsx"
-#file_name = "\\Users\\jamesmedinavanini\\Downloads\\Tarea 4\\Copia de quechuaCA.xlsx"
+#file_name = "/Users/jamesmedinavanini/Downloads/Tarea 4/Copia de quechuaCA.xlsx"
+file_name = "\\Users\\jamesmedinavanini\\Downloads\\Tarea 4\\Copia de quechuaCA.xlsx"
 
 # Leemos el DataFrame de la base de datos de quechua con la función read_excel de Pandas
 quechua = pd.read_excel(file_name)  
@@ -91,18 +91,18 @@ palabra = conjugador('miku', 'singular', 'segunda', 'Presente habitual')
 st.write("Ejemplo: La conjugación de 'miku' es", palabra)
 
 # Creamos un espacio para ingresar la base de los pronombres en quechua
-file_name_2 = "/Users/jamesmedinavanini/Downloads/Tarea 4/Copia de pronombresCA.xlsx"
-#file_name_2 = "\\Users\\jamesmedinavanini\\Downloads\\Tarea 4\\Copia de pronombresCA.xlsx"
+#file_name_2 = "/Users/jamesmedinavanini/Downloads/Tarea 4/Copia de pronombresCA.xlsx"
+file_name_2 = "\\Users\\jamesmedinavanini\\Downloads\\Tarea 4\\Copia de pronombresCA.xlsx"
 
 # Leemos el DataFrame de la base de datos de pronombres en quechua con la función read_excel de Pandas
-pronombres_hojas = pd.ExcelFile("Copia de pronombresCA.xlsx")
+pronombres_hojas = pd.ExcelFile(file_name_2)
 # "Copia de pronombresCA.xlsx" es el nombre de la base de datos de pronombres en quechua
 # pd.ExcelFile es para leer la base de datos de pronombres en quechua
 
 # Creamos un diccionario vacío DP
 DP = {}
 for hoja in pronombres_hojas.sheet_names:
-    dfp = pd.read_excel("Copia de pronombresCA.xlsx", sheet_name=hoja)
+    dfp = pd.read_excel(file_name_2, sheet_name=hoja)
     c = dfp.columns
     dfp.set_index(c[0], inplace=True)
     dp = dfp.to_dict()
