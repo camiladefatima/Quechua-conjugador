@@ -85,14 +85,21 @@ tiempos_con_descripciones = [
 ]
 
 
-# Mostramos todos los dataframes de la base de datos de quechua (opcional)
-i = 0
-for hoja, data in D.items():
-    st.write(tiempos_con_descripciones[i][0])
-    st.write(tiempos_con_descripciones[i][1])
-    i = i+1
-    #display(f"Conjugación del quechua en {hoja}:")
-    st.write(pd.DataFrame(data))
+# Número de elementos por fila
+elementos_por_fila = 3
+
+# Crear una lista de títulos y dataframes
+titulos = [tiempos_con_descripciones[i][0] for i in range(len(tiempos_con_descripciones))]
+dataframes = [pd.DataFrame(data) for hoja, data in D.items()]
+
+# Iterar sobre los dataframes y mostrar en tres filas
+for i in range(0, len(titulos), elementos_por_fila):
+    col1, col2, col3 = st.columns(3)  # Crear tres columnas
+    for j, col in enumerate([col1, col2, col3]):
+        index = i + j
+        if index < len(titulos):
+            col.header(titulos[index])  # Mostrar título
+            col.write(dataframes[index])  # Mostrar dataframe
 
 
 # st.write(f"Conjugación del quechua en {hoja}:", pd.DataFrame(data))
