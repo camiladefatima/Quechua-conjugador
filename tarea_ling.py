@@ -34,11 +34,11 @@ st.markdown("<h1 style='text-align: center;'>Conjugador de verbos en quechua</h1
 # <h1> es para el tamaño de la letra del título
 
 # Creamos una variable file_name para guardar la ruta de la base de datos de quechua
-file_name = "\\Users\\jamesmedinavanini\\Downloads\\Tarea 4\\Copia de quechuaCA.xlsx"
-# "C:\\Users\\Luisa\\Desktop\\Camila_quechua\\Copia de quechuaCA.xlsx" es la ruta de la base de datos de quechua
+file_name = "/Users/jamesmedinavanini/Downloads/Tarea 4/Copia de quechuaCA.xlsx"
+#file_name = "\\Users\\jamesmedinavanini\\Downloads\\Tarea 4\\Copia de quechuaCA.xlsx"
 
 # Leemos el DataFrame de la base de datos de quechua con la función read_excel de Pandas
-quechua = pd.read_excel("Copia de quechuaCA.xlsx")  
+quechua = pd.read_excel(file_name)  
 # "Copia de quechuaCA.xlsx" es el nombre de la base de datos de quechua
 # pd.read_excel es para leer la base de datos de quechua
 
@@ -46,7 +46,7 @@ quechua = pd.read_excel("Copia de quechuaCA.xlsx")
 # quechua
 
 # Creamos otra variable para guardar 
-quechua_hojas = pd.ExcelFile("Copia de quechuaCA.xlsx")
+quechua_hojas = pd.ExcelFile(file_name)
 # "Copia de quechuaCA.xlsx" es el nombre de la base de datos de quechua
 # pd.ExcelFile es para leer la base de datos de quechua
 
@@ -91,7 +91,8 @@ palabra = conjugador('miku', 'singular', 'segunda', 'Presente habitual')
 st.write("Ejemplo: La conjugación de 'miku' es", palabra)
 
 # Creamos un espacio para ingresar la base de los pronombres en quechua
-file_name_2 = "\\Users\\jamesmedinavanini\\Downloads\\Tarea 4\\Copia de pronombresCA.xlsx"
+file_name_2 = "/Users/jamesmedinavanini/Downloads/Tarea 4/Copia de pronombresCA.xlsx"
+#file_name_2 = "\\Users\\jamesmedinavanini\\Downloads\\Tarea 4\\Copia de pronombresCA.xlsx"
 
 # Leemos el DataFrame de la base de datos de pronombres en quechua con la función read_excel de Pandas
 pronombres_hojas = pd.ExcelFile("Copia de pronombresCA.xlsx")
@@ -112,13 +113,15 @@ for hoja in pronombres_hojas.sheet_names:
 st.write("Los pronombres en quechua son:", dfp)
 
 # Creamos una función conjtotal para conjugar verbos en quechua con pronombres
-
-def pronombre(tiempo, numero, persona):
-    return DP[tiempo][numero][persona]
+def pronombre(numero, persona):
+    return DP['Hoja 1'][numero][persona]
 
 # La función conjtotal recibe cuatro parámetros: base, número, persona y tiempo
 # La función conjtotal devuelve la conjugación del verbo en quechua con pronombres
+vocales = ['a', 'i', 'u']
 def conjtotal(base, numero, persona, tiempo):
+    if base[-1] not in vocales:
+        base = base[:-1]
     return base + D[tiempo][numero][persona]
 
 # Creamos una variable palabra_conjugada para guardar la conjugación de un verbo en quechua con pronombres
@@ -142,14 +145,13 @@ tiempo = st.selectbox("Seleccione el tiempo:", ['Presente simple', 'Presente pro
 # Creamos una condición para conjugar verbos en quechua
 # Si la base y la persona y el número y el tiempo son verdaderos
 # Entonces creamos una función conjugador para conjugar verbos en quechua
-if base and persona and numero and tiempo:
-    #def conjugador(base,numero,persona,tiempo):
-    #return base + D[tiempo][numero][persona]
-    
-    # Creamos una variable palabra_conjugada para guardar la conjugación de un verbo en quechua
-    palabra_conjugada = conjtotal(base, numero, persona, tiempo)
-    
-    # Mostramos la conjugación del verbo en quechua
-    #st.write("La conjugación es:", palabra_conjugada)
-    
-    st.write('El verbo conjugado es', pronombre(tiempo, numero, persona), palabra_conjugada)
+if st.button("Conjugar"):
+    if base and persona and numero and tiempo:
+        # Lógica para la conjugación (aquí deberías colocar tu lógica de conjugación)
+        palabra_conjugada = conjtotal(base, numero, persona, tiempo)
+        pronombre_conjugado = pronombre(numero, persona)
+        st.write(f'El verbo conjugado es: {pronombre_conjugado} {palabra_conjugada}')
+    else:
+        st.warning("Por favor, complete todos los campos")
+
+
