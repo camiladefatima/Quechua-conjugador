@@ -69,23 +69,10 @@ for hoja in quechua_hojas.sheet_names:
 
 # Mostramos el diccionario de la base de datos de quechua (opcional)
 # D
-# Definir el diccionario con las descripciones de los tiempos verbales
-descripciones_tiempos = {
-    "Presente simple": "Indica acciones que ocurren en el presente sin indicar duración específica.",
-    "Presente progresivo": "Indica acciones que están en progreso en el presente.",
-    "Presente habitual": "Se utiliza para expresar acciones que se repiten con frecuencia en el presente.",
-    "Participio pasado": "Es la forma del verbo utilizada para formar tiempos compuestos o expresar acciones finalizadas en el pasado.",
-    "Pasado experimentado simple": "Expresa acciones pasadas que fueron experimentadas personalmente por el hablante.",
-    "Pasado experimentado progresivo": "Indica acciones que estaban en progreso en el pasado y fueron experimentadas personalmente por el hablante.",
-    " Pasado experimentado habitual": "Se utiliza para expresar acciones habituales en el pasado, experimentadas personalmente por el hablante.",
-    "Pasado no experimentado simple": "Expresa acciones que ocurrieron en el pasado pero no fueron experimentadas personalmente por el hablante.",
-    "Pasado noexperimentado progresivo": "Indica acciones que estaban en progreso en el pasado pero no fueron experimentadas personalmente por el hablante.",
-    "Pasado noexperimentado habitual": "Se utiliza para expresar acciones habituales en el pasado que no fueron experimentadas personalmente por el hablante."
-}
 
 # Mostramos todos los dataframes de la base de datos de quechua (opcional)
 for hoja, data in D.items():
-  st.write(descripciones_tiempos[hoja])
+  st.write(f"Conjugación del quechua en {hoja}:")
   st.write(pd.DataFrame(data))
 # st.write(f"Conjugación del quechua en {hoja}:", pd.DataFrame(data))
 # f"Conjugación del quechua en {hoja}:" es para mostrar el nombre de la hoja
