@@ -146,12 +146,19 @@ tiempo = st.selectbox("Seleccione el tiempo:", ['Presente simple', 'Presente pro
 # Si la base y la persona y el número y el tiempo son verdaderos
 # Entonces creamos una función conjugador para conjugar verbos en quechua
 if st.button("Conjugar"):
-    if base and persona and numero and tiempo:
-        # Lógica para la conjugación (aquí deberías colocar tu lógica de conjugación)
-        palabra_conjugada = conjtotal(base, numero, persona, tiempo)
-        pronombre_conjugado = pronombre(numero, persona)
-        st.write(f'El verbo conjugado es: {pronombre_conjugado} {palabra_conjugada}')
-    else:
-        st.warning("Por favor, complete todos los campos")
+        if base and persona and numero and tiempo:
+            try:
+                palabra_conjugada = conjtotal(base, numero, persona, tiempo)
+                pronombre_conjugado = pronombre(numero, persona)
+                st.write(f'El verbo conjugado es: {pronombre_conjugado} {palabra_conjugada}')
+            except Exception as e:
+                st.warning("La conjugación no es posible. :(")
+        else:
+            st.warning("Por favor, complete todos los campos.")
+
+    st.warning("Algunas conjugaciones no están disponibles en esta plataforma.")
+    st.write("Limitaciones:")
+    st.write("- Algunos verbos pueden tener formas irregulares que no están cubiertas.")
+    st.write("- No todas las formas verbales pueden estar registradas en nuestra base de datos.")
 
 
