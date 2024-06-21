@@ -140,7 +140,7 @@ persona = st.selectbox("Seleccione la persona:", ['primera', 'segunda', 'tercera
 numero = st.selectbox("Seleccione el número:", ['singular', 'plural'])
 
 # Creamos un espacio para seleccionar el tiempo en quechua
-tiempo = st.selectbox("Seleccione el tiempo:", ['Presente simple', 'Presente progresivo','Presente habitual', 'Participio pasado', 'Pasado experimentado simple', 'Pasado experimentado progresivo', 'Pasado experimentado habitual', 'Pasado no experimentado simple', 'Pasado noexperimentado progresi', ' Pasado noexperimentado habitual'])
+tiempo = st.selectbox("Seleccione el tiempo:", ['Presente simple', 'Presente progresivo','Presente habitual', 'Participio pasado', 'Pasado experimentado simple', 'Pasado experimentado progresivo', 'Pasado experimentado habitual ', 'Pasado no experimentado simple', 'Pasado noexperimentado progresi', 'Pasado noexperimentado habitual'])
 
 # Creamos una condición para conjugar verbos en quechua
 # Si la base y la persona y el número y el tiempo son verdaderos
