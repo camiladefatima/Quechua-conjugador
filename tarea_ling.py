@@ -85,11 +85,13 @@ tiempos_con_descripciones = [
 ]
 
 
+
 # Número de elementos por fila
 elementos_por_fila = 3
 
-# Crear una lista de títulos y dataframes
+# Crear una lista de títulos, descripciones y dataframes
 titulos = [tiempos_con_descripciones[i][0] for i in range(len(tiempos_con_descripciones))]
+descripciones = [tiempos_con_descripciones[i][1] for i in range(len(tiempos_con_descripciones))]
 dataframes = [pd.DataFrame(data) for hoja, data in D.items()]
 
 # Iterar sobre los dataframes y mostrar en tres filas
@@ -99,7 +101,9 @@ for i in range(0, len(titulos), elementos_por_fila):
         index = i + j
         if index < len(titulos):
             col.header(titulos[index])  # Mostrar título
+            col.write(descripciones[index])  # Mostrar descripción
             col.write(dataframes[index])  # Mostrar dataframe
+
 
 
 # st.write(f"Conjugación del quechua en {hoja}:", pd.DataFrame(data))
