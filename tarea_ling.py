@@ -156,9 +156,9 @@ if st.button("Conjugar"):
         else:
             st.warning("Por favor, complete todos los campos.")
 
-    st.warning("Algunas conjugaciones no están disponibles en esta plataforma.")
-    st.write("Limitaciones:")
-    st.write("- Algunos verbos pueden tener formas irregulares que no están cubiertas.")
-    st.write("- No todas las formas verbales pueden estar registradas en nuestra base de datos.")
+st.warning("Algunas conjugaciones no están disponibles en esta plataforma.")
+st.write("Limitaciones:")
+st.write("- Algunos verbos pueden tener formas irregulares que no están cubiertas.")
+st.write("- No todas las formas verbales pueden estar registradas en nuestra base de datos.")
 
 
