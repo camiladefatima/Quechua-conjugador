@@ -102,7 +102,7 @@ pronombres_hojas = pd.ExcelFile("Copia de pronombresCA.xlsx")
 # Creamos un diccionario vacío DP
 DP = {}
 for hoja in pronombres_hojas.sheet_names:
-    dfp = pd.read_excel(file_name_2, sheet_name=hoja)
+    dfp = pd.read_excel("Copia de pronombresCA.xlsx", sheet_name=hoja)
     c = dfp.columns
     dfp.set_index(c[0], inplace=True)
     dp = dfp.to_dict()
