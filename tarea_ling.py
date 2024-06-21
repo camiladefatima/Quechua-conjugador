@@ -86,7 +86,7 @@ tiempos_con_descripciones = [
 
 
 # Mostramos todos los dataframes de la base de datos de quechua (opcional)
-for hoja, data in D.items():
+for tiempo, descripcion in tiempos_con_descripciones:
   st.write(f"Conjugación del quechua en {tiempo}:")
   st.write(descripcion)  
   st.write(pd.DataFrame(data))
