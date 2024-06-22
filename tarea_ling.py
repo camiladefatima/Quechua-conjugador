@@ -181,8 +181,6 @@ def conjtotal(base, numero, persona, tiempo):
 # Creamos una variable palabra_conjugada para guardar la conjugación de un verbo en quechua con pronombres
 palabra_conjugada = conjtotal('tiya','singular','tercera','Pasado experimentado simple')
 
-# 'tiya' es la base del verbo en quechua
-st.write("Ejemplo: La conjugación de 'tiya' y su pronombre es", palabra_conjugada)
 
 # Creamos un espacio para ingresar la base de los verbos en quechua
 base = st.text_input("Ingrese la base para conjugar:")
