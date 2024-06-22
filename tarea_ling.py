@@ -25,26 +25,7 @@ import pandas as pd
 #Importamos Pandas: esta biblioteca sirve para el análisis de datos tabulados en Python
 import os 
 #Esta librería proporciona una interfaz para interactuar con el sistema operativo (manipulación de rutas, la creación y eliminación de directorios, y la obtención de información sobre archivos)
-"""
-# Función para insertar CSS personalizado
-page_bg_img = f"""
-<style>
-[data-testid="stAppViewContainer"] > .main {{
-background-image: url("https://i.postimg.cc/4xgNnkfX/Untitled-design.png");
-background-size: cover;
-background-position: center center;
-background-repeat: no-repeat;
-background-attachment: local;
-}}
-[data-testid="stHeader"] {{
-background: rgba(0,0,0,0);
-}}
-</style>
-"""
 
-
-st.markdown(page_bg_img, unsafe_allow_html=True)
-"""
 
 st.image("Imagen.jpeg", caption="Mi imagen", use_column_width=True)
 
