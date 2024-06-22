@@ -26,6 +26,22 @@ import pandas as pd
 import os 
 #Esta librería proporciona una interfaz para interactuar con el sistema operativo (manipulación de rutas, la creación y eliminación de directorios, y la obtención de información sobre archivos)
 
+page_bg_img = f"""
+<style>
+[data-testid="stAppViewContainer"] > .main {{
+background-image: "Imagen.jpeg";
+background-size: cover;
+background-position: center center;
+background-repeat: no-repeat;
+background-attachment: local;
+}}
+[data-testid="stHeader"] {{
+background: rgba(0,0,0,0);
+}}
+</style>
+"""
+
+st.markdown(page_bg_img, unsafe_allow_html=True)
 
 
 # Con formato de Markdown centramos y agrandamos la letra del título de la web en streamlit
@@ -35,18 +51,6 @@ st.write("¡Explora la riqueza del quechua conjugando verbos en diferentes tiemp
 # style='text-align: center;' es para centrar el título
 # unsafe_allow_html=True es para permitir el uso de HTML en Streamlit
 # <h1> es para el tamaño de la letra del título
-
-# HTML y CSS para establecer una imagen de fondo
-page_bg_img = '''
-<style>
-body {
-background-image: url("Imagen.jpeg");
-background-size: cover;
-}
-</style>
-'''
-
-st.markdown(page_bg_img, unsafe_allow_html=True)
 
 
 # Creamos una variable file_name para guardar la ruta de la base de datos de quechua
