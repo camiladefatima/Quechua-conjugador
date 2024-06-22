@@ -27,6 +27,15 @@ import os
 #Esta librería proporciona una interfaz para interactuar con el sistema operativo (manipulación de rutas, la creación y eliminación de directorios, y la obtención de información sobre archivos)
 
 
+
+# Con formato de Markdown centramos y agrandamos la letra del título de la web en streamlit
+st.markdown("<h1 style='text-align: center; color: #006633;'>¡Bienvenido al Conjugador de Verbos en Quechua!</h1>", unsafe_allow_html=True)
+st.write("¡Explora la riqueza del quechua conjugando verbos en diferentes tiempos y personas!")
+# st.markdown("<h1 style='text-align: center;'>Conjugador de verbos en quechua</h1>", unsafe_allow_html=True)
+# style='text-align: center;' es para centrar el título
+# unsafe_allow_html=True es para permitir el uso de HTML en Streamlit
+# <h1> es para el tamaño de la letra del título
+
 # HTML y CSS para establecer una imagen de fondo
 page_bg_img = '''
 <style>
@@ -38,15 +47,6 @@ background-size: cover;
 '''
 
 st.markdown(page_bg_img, unsafe_allow_html=True)
-
-
-# Con formato de Markdown centramos y agrandamos la letra del título de la web en streamlit
-st.markdown("<h1 style='text-align: center; color: #006633;'>¡Bienvenido al Conjugador de Verbos en Quechua!</h1>", unsafe_allow_html=True)
-st.write("¡Explora la riqueza del quechua conjugando verbos en diferentes tiempos y personas!")
-# st.markdown("<h1 style='text-align: center;'>Conjugador de verbos en quechua</h1>", unsafe_allow_html=True)
-# style='text-align: center;' es para centrar el título
-# unsafe_allow_html=True es para permitir el uso de HTML en Streamlit
-# <h1> es para el tamaño de la letra del título
 
 
 # Creamos una variable file_name para guardar la ruta de la base de datos de quechua
