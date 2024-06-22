@@ -34,8 +34,20 @@ background-size: auto;
 background-position: center center;
 background-repeat: repeat;
 background-attachment: local;
-filter: brightness(0.5); /* Ajusta el valor para oscurecer más o menos */
+position: relative;
 }}
+
+[data-testid="stAppViewContainer"] > .main::before {{
+content: "";
+position: absolute;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+background: rgba(0, 0, 0, 0.5); /* Ajusta el valor de opacidad para oscurecer más o menos */
+z-index: -1;
+}}
+
 [data-testid="stHeader"] {{
 background: rgba(0,0,0,0);
 }}
@@ -43,6 +55,7 @@ background: rgba(0,0,0,0);
 """
 
 st.markdown(page_bg_img, unsafe_allow_html=True)
+
 
 
 
