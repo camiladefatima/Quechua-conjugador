@@ -47,7 +47,7 @@ st.markdown(page_bg_img, unsafe_allow_html=True)
 
 
 # Con formato de Markdown centramos y agrandamos la letra del título de la web en streamlit
-st.markdown("<h1 style='text-align: center; color: #006633;'>¡Bienvenido al Conjugador de Verbos en Quechua!</h1>", unsafe_allow_html=True)
+st.markdown("<h1 style='text-align: center; color: #FFFFFF;'>¡Bienvenido al Conjugador de Verbos en Quechua!</h1>", unsafe_allow_html=True)
 st.write("¡Explora la riqueza del quechua conjugando verbos en diferentes tiempos y personas!")
 # st.markdown("<h1 style='text-align: center;'>Conjugador de verbos en quechua</h1>", unsafe_allow_html=True)
 # style='text-align: center;' es para centrar el título
