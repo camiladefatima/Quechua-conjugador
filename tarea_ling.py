@@ -26,7 +26,7 @@ import pandas as pd
 import os 
 #Esta librería proporciona una interfaz para interactuar con el sistema operativo (manipulación de rutas, la creación y eliminación de directorios, y la obtención de información sobre archivos)
 
-quiero quitar el brillo a esta imagen page_bg_img = f"""
+page_bg_img = f"""
 <style>
 [data-testid="stAppViewContainer"] > .main {{
 background-image: url("https://i.postimg.cc/ZKNXnN9K/Imagen.jpg");
@@ -36,7 +36,7 @@ background-repeat: repeat;
 background-attachment: local;
 }}
 [data-testid="stHeader"] {{
-background: rgba(0,0,0,0);
+background: rgba(0,0,0,6);
 }}
 </style>
 """
