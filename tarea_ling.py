@@ -27,24 +27,22 @@ import os
 #Esta librería proporciona una interfaz para interactuar con el sistema operativo (manipulación de rutas, la creación y eliminación de directorios, y la obtención de información sobre archivos)
 
 # Función para insertar CSS personalizado
-def set_background(image_url):
-    # Establecer el estilo CSS
-    page_bg_img = '''
-    <style>
-    body {
-    background-image: url("%s");
-    background-size: cover;
-    }
-    </style>
-    ''' % image_url
+page_bg_img = f"""
+<style>
+[data-testid="stAppViewContainer"] > .main {{
+background-image: url("https://i.postimg.cc/4xgNnkfX/Untitled-design.png");
+background-size: cover;
+background-position: center center;
+background-repeat: no-repeat;
+background-attachment: local;
+}}
+[data-testid="stHeader"] {{
+background: rgba(0,0,0,0);
+}}
+</style>
+"""
 
-    st.markdown(page_bg_img, unsafe_allow_html=True)
-
-# Ruta a tu imagen de fondo (cambia esta ruta a la ubicación de tu imagen)
-background_image = 'Imagen.jpeg'
-
-# Llama a la función para establecer el fondo
-set_background(background_image)
+st.markdown(page_bg_img, unsafe_allow_html=True)
 
 # Con formato de Markdown centramos y agrandamos la letra del título de la web en streamlit
 st.markdown("<h1 style='text-align: center; color: #006633;'>¡Bienvenido al Conjugador de Verbos en Quechua!</h1>", unsafe_allow_html=True)
