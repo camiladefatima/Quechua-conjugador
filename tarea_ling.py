@@ -37,7 +37,7 @@ page_bg_img = f"""
     background-position: center center;
     background-repeat: repeat;
     background-attachment: local;
-    filter: brightness(-10%); /* Ajusta el valor para cambiar el brillo */
+    
 }}
 [data-testid="stHeader"] {{
     background: rgba(0,0,0,0);
