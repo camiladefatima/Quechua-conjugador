@@ -34,8 +34,22 @@ page_bg_img = f"""
     background-position: center center;
     background-repeat: repeat;
     background-attachment: local;
+}}
+
+[data-testid="stAppViewContainer"] > .main::after {{
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: inherit;
+    background-size: inherit;
+    background-position: inherit;
+    background-repeat: inherit;
     filter: brightness(0.8); /* Ajusta el valor según sea necesario */
 }}
+
 [data-testid="stHeader"] {{
     background: rgba(0,0,0,0);
 }}
@@ -43,7 +57,6 @@ page_bg_img = f"""
 """
 
 st.markdown(page_bg_img, unsafe_allow_html=True)
-
 
 
 
