@@ -29,7 +29,7 @@ import os
 page_bg_img = f"""
 <style>
 [data-testid="stAppViewContainer"] > .main {{
-background-image: url("https://i.postimg.cc/ZKNXnN9K/Imagen.jpg");
+background-image: url("https://i.postimg.cc/44pST9m6/Imagen.jpg");
 background-size: auto;
 background-position: center center;
 background-repeat: repeat;
