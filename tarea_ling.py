@@ -29,34 +29,20 @@ import os
 page_bg_img = f"""
 <style>
 [data-testid="stAppViewContainer"] > .main {{
-background-image: url("https://i.postimg.cc/ZKNXnN9K/Imagen.jpg");
-background-size: auto;
-background-position: center center;
-background-repeat: repeat;
-background-attachment: local;
-position: relative;
-}}
-
-[data-testid="stAppViewContainer"] > .main::before {{
-content: "";
-position: absolute;
-top: 0;
-left: 0;
-right: 0;
-bottom: 0;
-background: rgba(0, 0, 0, 0.5); /* Ajusta el valor de opacidad para oscurecer más o menos */
-z-index: -1;
+    background-image: url("https://i.postimg.cc/ZKNXnN9K/Imagen.jpg");
+    background-size: auto;
+    background-position: center center;
+    background-repeat: repeat;
+    background-attachment: local;
 }}
 
 [data-testid="stHeader"] {{
-background: rgba(0,0,0,0);
+    background: rgba(0,0,0,0.5); /* Cambia el último valor para ajustar la opacidad */
 }}
 </style>
 """
 
 st.markdown(page_bg_img, unsafe_allow_html=True)
-
-
 
 
 
