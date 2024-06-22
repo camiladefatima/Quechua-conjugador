@@ -26,29 +26,25 @@ import pandas as pd
 import os 
 #Esta librería proporciona una interfaz para interactuar con el sistema operativo (manipulación de rutas, la creación y eliminación de directorios, y la obtención de información sobre archivos)
 
-# Ruta de la imagen de fondo
-imagen_path = "Imagen.jpg"  # Reemplaza con la ruta de tu imagen de fondo
-
-# Estilo CSS para el contenedor principal
-estilo_css = f"""
+# Función para insertar CSS personalizado
+def set_background(image_url):
+    # Establecer el estilo CSS
+    page_bg_img = '''
     <style>
-        .estilo-fondo {{
-            background-image: url('{imagen_path}');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            height: 100vh;  /* Altura de la ventana visible */
-            width: 100%;    /* Ancho total */
-            position: fixed; /* Fijar la imagen para que cubra toda la pantalla */
-            top: 0;
-            left: 0;
-            z-index: -1;    /* Colocar detrás de todos los elementos */
-        }}
+    body {
+    background-image: url("%s");
+    background-size: cover;
+    }
     </style>
-"""
+    ''' % image_url
 
-# Insertar el estilo CSS en el contenido de Streamlit
-st.markdown(estilo_css, unsafe_allow_html=True)
+    st.markdown(page_bg_img, unsafe_allow_html=True)
+
+# Ruta a tu imagen de fondo (cambia esta ruta a la ubicación de tu imagen)
+background_image = 'Imagen.jpeg'
+
+# Llama a la función para establecer el fondo
+set_background(background_image)
 
 # Con formato de Markdown centramos y agrandamos la letra del título de la web en streamlit
 st.markdown("<h1 style='text-align: center; color: #006633;'>¡Bienvenido al Conjugador de Verbos en Quechua!</h1>", unsafe_allow_html=True)
