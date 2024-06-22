@@ -25,7 +25,7 @@ import pandas as pd
 #Importamos Pandas: esta biblioteca sirve para el análisis de datos tabulados en Python
 import os 
 #Esta librería proporciona una interfaz para interactuar con el sistema operativo (manipulación de rutas, la creación y eliminación de directorios, y la obtención de información sobre archivos)
-
+"""
 # Función para insertar CSS personalizado
 page_bg_img = f"""
 <style>
@@ -42,7 +42,11 @@ background: rgba(0,0,0,0);
 </style>
 """
 
+
 st.markdown(page_bg_img, unsafe_allow_html=True)
+"""
+
+st.image("imagen.jpeg", caption="Mi imagen", use_column_width=True)
 
 # Con formato de Markdown centramos y agrandamos la letra del título de la web en streamlit
 st.markdown("<h1 style='text-align: center; color: #006633;'>¡Bienvenido al Conjugador de Verbos en Quechua!</h1>", unsafe_allow_html=True)
