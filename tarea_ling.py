@@ -34,10 +34,10 @@ background-size: auto;
 background-position: center center;
 background-repeat: repeat;
 background-attachment: local;
-background: rgba(0,0,0,0.5);
+background: rgba(0,0,0,0.1);
 }}
 [data-testid="stHeader"] {{
-background: rgba(0,0,0,6);
+background: rgba(0,0,0,0);
 }}
 </style>
 """
