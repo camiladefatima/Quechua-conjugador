@@ -28,27 +28,22 @@ import os
 
 page_bg_img = f"""
 <style>
-  [data-testid="stAppViewContainer"] > .main {{
-    background-image: url("https://i.postimg.cc/ZKNXnN9K/Imagen.jpg");
-    background-size: cover;  /* Adjust as needed (cover, contain, auto) */
-    background-position: center center;
-    background-repeat: no-repeat;  /* Prevent image tiling */
-    background-attachment: fixed;  /* Keep image in place when scrolling */
-  }}
-
-  /* New: Set a dark background color with some transparency */
-  [data-testid="stAppViewContainer"] > .main {{
-    background-color: rgba(0, 0, 0, 0.7);  /* Adjust opacity (0 for black, 1 for transparent) */
-  }}
-
-  /* Adjust text color for better contrast (optional) */
-  .stText, .stMarkdown p {{
-    color: white;  /* Or a suitable light color */
-  }}
+[data-testid="stAppViewContainer"] > .main {{
+background-image: url("https://i.postimg.cc/ZKNXnN9K/Imagen.jpg");
+background-size: auto;
+background-position: center center;
+background-repeat: repeat;
+background-attachment: local;
+filter: brightness(0.5); /* Ajusta el valor para oscurecer más o menos */
+}}
+[data-testid="stHeader"] {{
+background: rgba(0,0,0,0);
+}}
 </style>
 """
 
 st.markdown(page_bg_img, unsafe_allow_html=True)
+
 
 
 
