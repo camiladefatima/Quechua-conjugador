@@ -193,5 +193,8 @@ if st.button("Conjugar"):
 st.write("Limitaciones:")
 st.write("- Algunos verbos pueden tener formas irregulares que no están cubiertas.")
 
+# Mensaje de agradecimiento
+st.write("###\n\n ¡Gracias por explorar el conjugador de verbos en quechua! 🌟 Esperamos que hayas disfrutado utilizando esta herramienta. 🌷")
+
 
 
