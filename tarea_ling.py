@@ -36,19 +36,14 @@ background-repeat: repeat;
 background-attachment: local;
 position: relative;
 }}
-[data-testid="stAppViewContainer"] > .main:before {{
+[data-testid="stAppViewContainer"] > .main::before {{
 content: "";
 position: absolute;
 top: 0;
 left: 0;
-right: 0;
-bottom: 0;
-background-color: rgba(0, 0, 0, 0.5); /* Ajusta la opacidad según sea necesario */
-z-index: 1;
-}}
-[data-testid="stAppViewContainer"] > .main > div {{
-position: relative;
-z-index: 2;
+width: 100%;
+height: 100%;
+background-color: rgba(0, 0, 0, 0.5); /* Ajusta el último valor para cambiar la opacidad */
 }}
 [data-testid="stHeader"] {{
 background: rgba(0,0,0,0);
@@ -57,7 +52,6 @@ background: rgba(0,0,0,0);
 """
 
 st.markdown(page_bg_img, unsafe_allow_html=True)
-
 
 
 
