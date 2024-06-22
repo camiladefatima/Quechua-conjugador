@@ -30,9 +30,9 @@ page_bg_img = f"""
 <style>
 [data-testid="stAppViewContainer"] > .main {{
 background-image: url("https://i.postimg.cc/ZKNXnN9K/Imagen.jpg");
-background-size: cover;
+background-size: auto;
 background-position: center center;
-background-repeat: no-repeat;
+background-repeat: repeat;
 background-attachment: local;
 }}
 [data-testid="stHeader"] {{
@@ -41,7 +41,8 @@ background: rgba(0,0,0,0);
 </style>
 """
 
-st.markdown(page_bg_img, unsafe_allow_html=True) 
+st.markdown(page_bg_img, unsafe_allow_html=True)
+
 
 
 # Con formato de Markdown centramos y agrandamos la letra del título de la web en streamlit
