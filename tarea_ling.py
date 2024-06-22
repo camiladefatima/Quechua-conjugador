@@ -29,19 +29,21 @@ import os
 page_bg_img = f"""
 <style>
 [data-testid="stAppViewContainer"] > .main {{
-background-image: url("https://i.postimg.cc/ZKNXnN9K/Imagen.jpg");
-background-size: auto;
-background-position: center center;
-background-repeat: repeat;
-background-attachment: local;
+    background-image: url("https://i.postimg.cc/ZKNXnN9K/Imagen.jpg");
+    background-size: auto;
+    background-position: center center;
+    background-repeat: repeat;
+    background-attachment: local;
+    filter: brightness(70%); /* Ajusta el valor para cambiar el brillo */
 }}
 [data-testid="stHeader"] {{
-background: rgba(0,0,0,0);
+    background: rgba(0,0,0,0);
 }}
 </style>
 """
 
 st.markdown(page_bg_img, unsafe_allow_html=True)
+
 
 
 # Con formato de Markdown centramos y agrandamos la letra del título de la web en streamlit
