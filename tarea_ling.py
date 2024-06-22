@@ -29,15 +29,15 @@ import os
 page_bg_img = f"""
 <style>
 [data-testid="stAppViewContainer"] > .main {{
-  background-image: url("https://i.postimg.cc/ZKNXnN9K/Imagen.jpg");
-  background-size: auto;
-  background-position: center center;
-  background-repeat: repeat;
-  background-attachment: local;
+    background-image: url("https://i.postimg.cc/ZKNXnN9K/Imagen.jpg");
+    background-size: auto;
+    background-position: center center;
+    background-repeat: repeat;
+    background-attachment: local;
+    filter: brightness(0.8); /* Ajusta el valor según sea necesario */
 }}
-
 [data-testid="stHeader"] {{
-  background: rgba(0,0,0,0.6); /* Aumentado a 0.8 para mayor opacidad */
+    background: rgba(0,0,0,0);
 }}
 </style>
 """
