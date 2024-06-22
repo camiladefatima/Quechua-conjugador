@@ -142,7 +142,7 @@ for hoja in pronombres_hojas.sheet_names:
 
 
 # Mostramos todos los dataframes de los pronombres en quechua (opcional)
-st.header("Los pronombres en quechua son:", dfp)
+st.write("Los pronombres en quechua son:", dfp)
 
 # Creamos una función conjtotal para conjugar verbos en quechua con pronombres
 def pronombre(numero, persona):
