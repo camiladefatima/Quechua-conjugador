@@ -26,38 +26,22 @@ import pandas as pd
 import os 
 #Esta librería proporciona una interfaz para interactuar con el sistema operativo (manipulación de rutas, la creación y eliminación de directorios, y la obtención de información sobre archivos)
 
-page_bg_img = f"""
+quiero quitar el brillo a esta imagen page_bg_img = f"""
 <style>
 [data-testid="stAppViewContainer"] > .main {{
-    background-image: url("https://i.postimg.cc/ZKNXnN9K/Imagen.jpg");
-    background-size: auto;
-    background-position: center center;
-    background-repeat: repeat;
-    background-attachment: local;
+background-image: url("https://i.postimg.cc/ZKNXnN9K/Imagen.jpg");
+background-size: auto;
+background-position: center center;
+background-repeat: repeat;
+background-attachment: local;
 }}
-
-[data-testid="stAppViewContainer"] > .main::after {{
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background-image: inherit;
-    background-size: inherit;
-    background-position: inherit;
-    background-repeat: inherit;
-    filter: brightness(0.8); /* Ajusta el valor según sea necesario */
-}}
-
 [data-testid="stHeader"] {{
-    background: rgba(0,0,0,0);
+background: rgba(0,0,0,0);
 }}
 </style>
 """
 
 st.markdown(page_bg_img, unsafe_allow_html=True)
-
 
 
 # Con formato de Markdown centramos y agrandamos la letra del título de la web en streamlit
