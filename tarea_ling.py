@@ -37,7 +37,7 @@ page_bg_img = f"""
 }}
 
 [data-testid="stHeader"] {{
-    background: rgba(0,0,0,0.5); /* Cambia el último valor para ajustar la opacidad */
+    background: rgba(0,0,0,0.8); /* Cambia el último valor para ajustar la opacidad */
 }}
 </style>
 """
