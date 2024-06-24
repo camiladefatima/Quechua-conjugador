@@ -1,24 +1,3 @@
-# Este código sirve para instalar Streamlit en tu computadora y hacer un primer programa en Streamlit.
-# Pero se ejecuta en la terminal de tu computadora, no en Jupyter Notebook.
-# pip install Streamlit
-
-# Este código sirve para acceder una página web en tu navegador que te brinda información sobre Streamlit.
-# Pero se ejecuta en la terminal Python de tu computadora, no en Jupyter Notebook.
-
-# streamlit hello
-
-# Antes de ejecutar un script de Python en Streamlit debes definir la carpeta donde se encuentra 
-# tus archivos en el terminal Python
-# cd ruta_de_tu_carpeta 
-# o abrir la carpeta donde se encuentra tus archivos con open folder y 
-# crear un archivo de Python (your_script.py) 
-
-# Este comando sirve para ejecutar un script de Python en Streamlit.
-# Pero se ejecuta en la terminal de tu computadora, no en Jupyter Notebook.
-# OJO: Debes antes tener instalado Streamlit en tu computadora, debes antes definir la ruta de tus archivos y 
-##     tener un script de Python (your_script.py) que quieras ejecutar en Streamlit.
-#  streamlit run your_script.py
-
 import streamlit as st  
 #Importamos Streamlit: esta biblioteca de Python facilita la creación y visualización de páginas web interactivas 
 import pandas as pd  
